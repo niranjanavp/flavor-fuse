@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="order_process.php" method="post">
+        <h2>Food Order Form</h2>
+
+        <label for="food_item">Select Food Item:</label>
+        <select name="food_item" id="food_item">
+            <option value="burger">Burger</option>
+            <option value="pizza">Pizza</option>
+            <option value="pasta">Pasta</option>
+            <!-- Add more food items as needed -->
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" value="1">
+
+        <label for="comments">Additional Comments:</label>
+        <textarea name="comments" id="comments" rows="4"></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+</body>
+</html>

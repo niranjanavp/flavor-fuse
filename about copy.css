@@ -1,0 +1,53 @@
+body {
+    background-image: url(''c:\Users\Niranjana\OneDrive\Pictures\food-pale-drinks-Favim.com-8736793.jpg);
+    background-size:contain
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ header {
+     background-color: #333;
+     color: #491e1e;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ main {
+     padding: 20px;
+ }
+ 
+ .combo {
+     border: 1px solid #221313;
+    
+     border-radius: 5px;
+     padding: 20px;
+     margin-bottom: 20px;
+ }
+ 
+ .combo h2 {
+     margin-top: 0;
+ }
+ 
+ button {
+     background-color: #8a4632;
+     color: #6f8241;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ 
+ button:hover {
+     background-color: #29582c;
+ }
+ 
+ footer {
+     background-color: #341515;
+     color: #7b7a4a;
+     text-align: center;
+     padding: 10px 0;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+ }

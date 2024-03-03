@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavor Fuse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .food-item {
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .food-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .food-details {
+      margin-top: 10px;
+    }
+
+    .swap-button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .combo-container{
+      /* display: flex; */
+      /* justify-content: end ; */
+      text-align: end;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Flavor Fuse</h1>
+  </header>
+  <div class="combo-container">
+    <h2> Choose your combo </h2>
+    <div class="combo">
+      <select id="menu" name="menu">
+        <option value="items">Items</option>
+<option value="cappuccino">Cappuccino</option>
+<option value="pepsi">Mojito</option>
+<option value="cocacola">cocacola</option>
+<option value="club sandwich">Club sandwich</option>
+<option value="chicken tika burger"> Chicken tika burger</option>
+<option value="sandae">sande</option>
+<option value="ice cream shake"> ice cream shake</option>
+</select>
+</div> 
+  </div>
+
+  <main>
+    <div class="food-item">
+      <img src="https://www.cokesolutions.com/content/dam/cokesolutions/us/images/Articles/801-combo-meal-large.jpg" alt="Food Item 1">
+      <div class="food-details">
+       <h3> <ul><li>SANDWICH</li>
+        <li>COCACOLA</li> <li>VEG SALAD</li></ul></h3>
+        <p>Description of the food item.</p>
+        <button class="swap-button"><a href="#"></a><a href="swap.html">swap</a></button>
+        
+      </div>
+    </div>
+
+    <div class="food-item">
+      <img src="https://images.theconversation.com/files/410720/original/file-20210712-46002-1ku5one.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C1000%2C696&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="Food Item 2">
+      <div class="food-details">
+        <h2> <ul><li>BURGER
+          <li>COCACOLA</li> <li>FRENCH FRIES
+        </h2>
+        <p>Description of the food item.</p>
+        <button class="swap-button"><a href="#"></a><a href="swap.html">swap</a></button>
+      </div>
+    </div>
+
+    <!-- Add more food items as needed -->
+
+  </main>
+
+</body>
+</html>

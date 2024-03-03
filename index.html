@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9eaea;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      border-bottom: 2px solid #4caf50;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="view.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('signInTab')">Sign In</div>
+      <div class="tab" onclick="showTab('signUpTab')"><a href="signup.html">Sign Up</a></div>
+    </div>
+
+    <div id="signInTab">
+       
+        
+      <h2>Login In</h2>
+
+      <label for="usernameSignIn">Username:</label>
+      <input type="text" id="usernameSignIn" name="usernameSignIn" required>
+
+      <label for="passwordSignIn">Password:</label>
+      <input type="password" id="passwordSignIn" name="passwordSignIn" required>
+
+      <button id="button"  type="submit"><a href="home.html">Sign In</a></button>
+      <label id="label"    for="#">Forget password?</label>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      const activeTab = document.getElementById(tabId);
+      activeTab.style.display = 'block';
+
+      tabs.forEach(tab => {
+        if (tab.id !== tabId) {
+          document.getElementById(tab.id).style.display = 'none';
+        }
+      });
+
+      document.querySelector(`.tab[id=${tabId}].tab`).classList.add('active');
+    }
+  </script>
+<body style="background-image: url('https://inspgr.id/app/uploads/2019/12/photography-pavel-sablya-17.jpg'); background-size: cover;"></body>
+</body>
+</html>

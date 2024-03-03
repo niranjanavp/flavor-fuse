@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add your custom styles here */
+        .menu-item {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .filter-input {
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Customizable Menu Example</title>
+</head>
+<body>
+
+    <h1>Menu</h1>
+
+    <label for="budget">Enter your budget: $</label>
+    <input type="number" id="budget" min="0" step="1" onchange="filterMenu()" class="filter-input">
+
+    <div id="menu-container">
+        <!-- Menu items will be dynamically added here -->
+    </div>
+
+    <script>
+        // Sample menu data (you can replace this with your own data)
+        const menuItems = [
+            { name: "Item 1", price: 5 },
+            { name: "Item 2", price: 10 },
+            { name: "Item 3", price: 15 },
+            { name: "Item 4", price: 20 },
+            { name: "Item 5", price: 25 },
+        ];
+
+        // Function to filter menu based on budget
+        function filterMenu() {
+            const budget = parseFloat(document.getElementById('budget').value);
+            const menuContainer = document.getElementById('menu-container');
+            menuContainer.innerHTML = ''; // Clear previous menu items
+
+            // Add items within budget to the menu
+            menuItems.forEach(item => {
+                if (item.price <= budget) {
+                    const menuItemElement = document.createElement('div');
+                    menuItemElement.classList.add('menu-item');
+                    menuItemElement.textContent = `${item.name} - $${item.price}`;
+                    menuContainer.appendChild(menuItemElement);
+                }
+            });
+        }
+
+        // Initial menu rendering
+        filterMenu();
+    </script>
+
+</body>
+</html>
+
